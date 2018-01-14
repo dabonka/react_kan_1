@@ -1,11 +1,12 @@
 import React from 'react'
 
-export default function Article(){
+export default function Article(props){
+const {article} = props
     return(
         <div>
-            <h3>title</h3>
+            <h3>{article.title}</h3>
             <section>
-                Text
+                {article.text}
             </section>
         </div>
     )
