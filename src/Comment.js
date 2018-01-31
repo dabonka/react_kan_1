@@ -1,12 +1,11 @@
 import React from 'react'
-import Article from './Article'
 
-export default function Comment({articles}) {
-    const articleElements = articles.map((article) => <li key = {article.id}><Article article = {article}/></li>)
-
+function Comment({comment}){
     return (
-        <ul>
-            {articleElements}
-        </ul>
+        <div>
+            <p>{comment.text} <b>by {comment.user}</b></p>
+        </div>
     )
 }
+
+export default Comment
